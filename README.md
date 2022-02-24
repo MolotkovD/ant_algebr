@@ -28,7 +28,8 @@
 Формула для вычисления вероятности перехода муравья из вершины i в j:
 
 
-<img src="https://latex.codecogs.com/svg.image?P_{ij},_{k}(t) = \frac{[τ_{ij}(t)]^α[n_{ij}]^β}{{\sum}[τ_{ij}(t)]^α[n_{ij}]^β}" />
+<center>
+<img src="https://latex.codecogs.com/svg.image?P_{ij,k}(t)&space;=&space;\frac{[\tau&space;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau&space;_{ij}(t)]^\alpha&space;[n_{ij}]^\beta&space;}&space;" title="P_{ij,k}(t) = \frac{[\tau _{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau _{ij}(t)]^\alpha [n_{ij}]^\beta } " /></center>
 
 
 где $τij(t)$ – количество феромона между вершинами $i$ и $j$, $ηij$ – расстояние между этими вершинами. $α, β$ – константные параметры. Их необходимо подбирать опытным путём, их значение должно быть такое, чтобы алгоритм не был слишком жадным и не застревал в локальных минимумах.
