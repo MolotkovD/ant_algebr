@@ -29,12 +29,8 @@
 Формула для вычисления вероятности перехода муравья из вершины i в j:
 
 <center>
-<img src="https://latex.codecogs.com/png.image?\dpi{200}&space;\color{white}&space;P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" title="\color{white} P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" />
-
-
+<img src="https://latex.codecogs.com/svg.latex?\dpi{200}&space;\color{white}&space;P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" title="\color{white} P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" />
 </center>
-
-![sdsds](https://latex.codecogs.com/png.image?\dpi{200}&space;\color{white}&space;P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta})
 
 где τij(t) – количество феромона между вершинами i и j, ηij – расстояние между этими вершинами. α, β – константные параметры. Их необходимо подбирать опытным путём, их значение должно быть такое, чтобы алгоритм не был слишком жадным и не застревал в локальных минимумах.
 
@@ -51,10 +47,10 @@
 Формула для пересчёта уровня феромона на каждой итерации алгоритма:
 
 <center>
-<img src="https://latex.codecogs.com/png.image?\dpi{200}&space;\color{white}\tau&space;_{ij}(t&plus;1)=(1-p)\tau&space;_{ij}(t)&plus;\sum_{\begin{subarray}\color{white}k&space;\in{used(i,j)}\end{subarray}}\frac{Q}{L_k(t)}" title="\color{white}\tau _{ij}(t+1)=(1-p)\tau _{ij}(t)+\sum_{\begin{subarray}\color{white}k \in{used(i,j)}\end{subarray}}\frac{Q}{L_k(t)}" />
+<img src="https://latex.codecogs.com/svg.latex?\dpi{200}&space;\color{white}\tau&space;_{ij}(t&plus;1)=(1-p)\tau&space;_{ij}(t)&plus;\sum_{\begin{subarray}\color{white}k&space;\in{used(i,j)}\end{subarray}}\frac{Q}{L_k(t)}" title="\color{white}\tau _{ij}(t+1)=(1-p)\tau _{ij}(t)+\sum_{\begin{subarray}\color{white}k \in{used(i,j)}\end{subarray}}\frac{Q}{L_k(t)}" />
 </center>
 
-где ρ – скорость испарения, t – номер итерации, Lk(t) – цена текущего решения для k-ого муравья, а Q – параметр, имеющий значение порядка цены оптимального решения, то есть <img src="https://latex.codecogs.com/png.image?\dpi{100}&space;\color{white}\frac{Q}{Lk(t)}" title="\color{white}\frac{Q}{Lk(t)}" /> – феромон, откладываемый k-ым муравьём, использующим ребро (i, j).
+где ρ – скорость испарения, t – номер итерации, Lk(t) – цена текущего решения для k-ого муравья, а Q – параметр, имеющий значение порядка цены оптимального решения, то есть <img src="https://latex.codecogs.com/svg.latex?\dpi{20}&space;\color{white}\frac{Q}{Lk(t)}" title="\color{white}\frac{Q}{Lk(t)}" /> – феромон, откладываемый k-ым муравьём, использующим ребро (i, j).
 
 Таким образом, количество феромона на ребре между i и j на новой итерации равно количеству феромона на старой итерации, умноженное на коэффициент испарения (феромон постоянно испаряется), и к полученному результату добавляется сумма всех новых порций феромона, который отложили все муравьи на этом участке. Добавка феромона, которую делает муравей, проходя по ребру, равна константе Q, делённой на длину маршрута L, пройденную муравьём k, при условии, что это ребро попало в маршрут муравья.
 
