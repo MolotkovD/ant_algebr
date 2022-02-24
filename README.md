@@ -30,6 +30,8 @@
 
 <center>
 <img src="https://latex.codecogs.com/png.image?\dpi{200}&space;\color{white}&space;P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" title="\color{white} P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta}" />
+
+    ![](https://latex.codecogs.com/png.image?\dpi{200}&space;\color{white}&space;P_{ij,k}(t)=\frac{[\tau;_{ij}(t)]^{\alpha}[n_{ij}]^{\beta}}{\sum[\tau_{ij}(t)]^\alpha;[n_{ij}]^\beta})
 </center>
 
 где τij(t) – количество феромона между вершинами i и j, ηij – расстояние между этими вершинами. α, β – константные параметры. Их необходимо подбирать опытным путём, их значение должно быть такое, чтобы алгоритм не был слишком жадным и не застревал в локальных минимумах.
